@@ -3,10 +3,11 @@ import { Paper, Box, Typography } from "@mui/material";
 import TabsWrappedLabel from "./TabsWrappedLabel";
 
 const TabsSelectionFullScreen = ({ tasks }) => {
-    const tasksLength = tasks.filter((task) => !task.completed);
+  const tasksLength = tasks.filter((task) => !task.completed);
   return (
     <div>
       <Paper
+        variant="outlined"
         square
         sx={{
           width: "100%",
@@ -24,10 +25,20 @@ const TabsSelectionFullScreen = ({ tasks }) => {
             width: "100%",
           }}
         >
-          <Typography variant="subtitle2" component="p" noWrap>
+          <Typography
+            variant="subtitle2"
+            component="p"
+            noWrap
+            color={secondary.main}
+          >
             {tasksLength.length} items left
           </Typography>
-          <Typography variant="subtitle2" component="p" noWrap>
+          <Typography
+            variant="subtitle2"
+            component="p"
+            noWrap
+            color={secondary.main}
+          >
             Clear Completed
           </Typography>
         </Box>

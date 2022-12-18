@@ -1,12 +1,13 @@
 import React from "react";
-import { Box, Paper,  Typography } from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 import TabsWrappedLabel from "./TabsWrappedLabel";
 
-const TabsSelectionSmallScreens = ({tasks}) => {
-        const tasksLength = tasks.filter(task => !task.completed)
+const TabsSelectionSmallScreens = ({ tasks }) => {
+  const tasksLength = tasks.filter((task) => !task.completed);
   return (
     <div>
       <Paper
+        variant="outlined"
         square
         sx={{
           width: "100%",
@@ -21,13 +22,13 @@ const TabsSelectionSmallScreens = ({tasks}) => {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-around",
-                      width: "100%",
+            width: "100%",
           }}
         >
           <Typography variant="subtitle2" component="p" noWrap>
-                 {tasksLength.length}      items left
+            {tasksLength.length} items left
           </Typography>
-        <TabsWrappedLabel />
+          <TabsWrappedLabel />
           <Typography variant="subtitle2" component="p" noWrap>
             Clear Completed
           </Typography>
