@@ -119,7 +119,7 @@ const App = () => {
               minHeight: "100vh",
               backgroundImage: backgroundImageChanger(matches, assignTheme),
               backgroundRepeat: "no-repeat",
-              backgroundSize: matches ? "100% 30%" : "100% 45%",
+              backgroundSize: matches ? "100% 35%" : "100% 45%",
             }}
           >
             <Box>

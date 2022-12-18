@@ -25,20 +25,10 @@ const TabsSelectionFullScreen = ({ tasks }) => {
             width: "100%",
           }}
         >
-          <Typography
-            variant="subtitle2"
-            component="p"
-            noWrap
-            color={secondary.main}
-          >
+          <Typography variant="subtitle2" component="p" noWrap>
             {tasksLength.length} items left
           </Typography>
-          <Typography
-            variant="subtitle2"
-            component="p"
-            noWrap
-            color={secondary.main}
-          >
+          <Typography variant="subtitle2" component="p" noWrap>
             Clear Completed
           </Typography>
         </Box>
