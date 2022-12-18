@@ -78,7 +78,7 @@ const lightTheme = createTheme({
 });
 
 const App = () => {
-  const [assignTheme, setAssignTheme] = useState(lightTheme);
+  const [assignTheme, setAssignTheme] = useState(darkTheme);
 
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
@@ -119,7 +119,7 @@ const App = () => {
               minHeight: "100vh",
               backgroundImage: backgroundImageChanger(matches, assignTheme),
               backgroundRepeat: "no-repeat",
-              backgroundSize: "100% 30%",
+              backgroundSize: matches ? "100% 30%" : "100% 45%",
             }}
           >
             <Box>
@@ -128,6 +128,7 @@ const App = () => {
                 maxWidth={"sm"}
                 sx={{
                   paddingTop: 1,
+                  marginTop: matches ? 1 : 4,
                 }}
               >
                 <TodoList matches={matches} />

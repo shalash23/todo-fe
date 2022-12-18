@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://github.com/shalash23/todo-fe)
+- Solution URL: [Solution](https://github.com/shalash23/todo-fe.git)
 - Live Site URL: [Add live site URL here](https://glittering-pithivier-1f9753.netlify.app/)
 
 ## My process
