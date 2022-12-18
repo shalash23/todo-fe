@@ -65,7 +65,6 @@ const Todos = ({ todo, id }) => {
       <Box
         sx={{
           mr: 2,
-          my: 2,
         }}
         onClick={() => {
           handleClick(id);
