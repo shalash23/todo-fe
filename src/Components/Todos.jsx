@@ -4,10 +4,10 @@ import InputCheckbox from "./InputCheckbox";
 import { AnimatePresence, motion } from "framer-motion";
 import { TodoContext } from "../TodoContext";
 
-const Todos = ({ todo }) => {
+const Todos = ({ todo, id }) => {
   const [state, setState] = React.useContext(TodoContext);
-  const handleClick = (e) => {
-    console.log(e.target);
+  const handleClick = (taskId) => {
+    setState((prevState) => prevState.filter((state) => state.id !== taskId));
   };
 
   return (
@@ -60,7 +60,9 @@ const Todos = ({ todo }) => {
           sx={{
             mr: 2,
           }}
-          onClick={handleClick}
+          onClick={() => {
+            handleClick(id);
+          }}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
             <path
